@@ -18,14 +18,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: windowScene)
         window?.makeKeyAndVisible()
         window?.rootViewController = createTabBar()
-        
-        
-      }
+    }
     
     func createHomeNavigationController() -> UINavigationController {
         let homeVC = HomeViewController()
         homeVC.title = "Home"
-        homeVC.tabBarItem = UITabBarItem(tabBarSystemItem: .featured, tag: 0)
+        homeVC.tabBarItem = UITabBarItem(title: "Home", image: UIImage(named: "home"), tag: 0)
         return UINavigationController(rootViewController: homeVC)
     }
     
