@@ -12,6 +12,7 @@ class PSSPButton: UIButton {
     override init(frame: CGRect) {
         super.init(frame: frame)
         configure()
+        shadows()
     }
     
     required init?(coder: NSCoder) {
@@ -23,6 +24,7 @@ class PSSPButton: UIButton {
         self.backgroundColor = backgroundColor
         self.setTitle(title, for: .normal)
         configure()
+        shadows()
     }
     
     private func configure() {
