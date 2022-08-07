@@ -17,22 +17,21 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .systemBrown
+        view.backgroundColor = .backgroundColorFirst
         
         collectionView.register(PSSPCollectionViewCell.self, forCellWithReuseIdentifier: PSSPCollectionViewCell.identifier)
         collectionView.delegate = self
         collectionView.dataSource = self
+        collectionView.frame = view.frame
+        collectionView.backgroundColor = .backgroundColorFirst
+
         view.addSubview(collectionView)
         
         
     }
     
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        collectionView.frame = view.frame
-    }
     
-    
+    //MARK: - Collection View
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 4

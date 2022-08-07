@@ -36,10 +36,10 @@ class PSSPButton: UIButton {
     private func shadows() {
         layer.cornerRadius = 10
         layer.shadowRadius = 5
-        layer.shadowColor = UIColor.systemPink.cgColor
+        layer.shadowColor = UIColor.white.cgColor
         layer.shadowOpacity = 0.5
         layer.shadowOffset = CGSize(width: 4, height: 4)
-        layer.backgroundColor = UIColor.systemRed.cgColor
+        layer.backgroundColor = UIColor.blueColor.cgColor
         layer.masksToBounds = false
         
     }
