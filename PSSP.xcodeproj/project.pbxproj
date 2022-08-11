@@ -10,9 +10,12 @@
 		B11E47D82887CBAC00777051 /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11E47D72887CBAC00777051 /* AppColors.swift */; };
 		B11E47DA2887D27600777051 /* PSSPButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11E47D92887D27600777051 /* PSSPButton.swift */; };
 		B11E47DE2889E6F800777051 /* PSSPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11E47DD2889E6F800777051 /* PSSPTextField.swift */; };
-		B16776B1288CA5FF00C73592 /* PSSPCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16776B0288CA5FF00C73592 /* PSSPCollectionViewCell.swift */; };
+		B16776B1288CA5FF00C73592 /* PSSPHomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16776B0288CA5FF00C73592 /* PSSPHomeCollectionViewCell.swift */; };
 		B183CB23288678D10021AEA0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B183CB22288678D10021AEA0 /* HomeViewController.swift */; };
 		B183CB25288678F40021AEA0 /* StatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B183CB24288678F40021AEA0 /* StatsViewController.swift */; };
+		B1B28BED28A3757A00639ABC /* PushUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B28BEC28A3757A00639ABC /* PushUpViewController.swift */; };
+		B1B7459D28A48DF300AB9038 /* PSSPStatsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B7459C28A48DF300AB9038 /* PSSPStatsCollectionViewCell.swift */; };
+		B1B7459F28A48ECA00AB9038 /* PSSPLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B7459E28A48ECA00AB9038 /* PSSPLabel.swift */; };
 		B1E7EFD5288298890081AEB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E7EFD4288298890081AEB3 /* AppDelegate.swift */; };
 		B1E7EFD7288298890081AEB3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E7EFD6288298890081AEB3 /* SceneDelegate.swift */; };
 		B1E7EFDE2882988C0081AEB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1E7EFDD2882988C0081AEB3 /* Assets.xcassets */; };
@@ -23,9 +26,12 @@
 		B11E47D72887CBAC00777051 /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
 		B11E47D92887D27600777051 /* PSSPButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSSPButton.swift; sourceTree = "<group>"; };
 		B11E47DD2889E6F800777051 /* PSSPTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSSPTextField.swift; sourceTree = "<group>"; };
-		B16776B0288CA5FF00C73592 /* PSSPCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSSPCollectionViewCell.swift; sourceTree = "<group>"; };
+		B16776B0288CA5FF00C73592 /* PSSPHomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSSPHomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		B183CB22288678D10021AEA0 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		B183CB24288678F40021AEA0 /* StatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsViewController.swift; sourceTree = "<group>"; };
+		B1B28BEC28A3757A00639ABC /* PushUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushUpViewController.swift; sourceTree = "<group>"; };
+		B1B7459C28A48DF300AB9038 /* PSSPStatsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSSPStatsCollectionViewCell.swift; sourceTree = "<group>"; };
+		B1B7459E28A48ECA00AB9038 /* PSSPLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSSPLabel.swift; sourceTree = "<group>"; };
 		B1E7EFD1288298890081AEB3 /* PSSP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PSSP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1E7EFD4288298890081AEB3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B1E7EFD6288298890081AEB3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +63,36 @@
 			path = Support;
 			sourceTree = "<group>";
 		};
+		B1B28BEE28A3758D00639ABC /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B183CB22288678D10021AEA0 /* HomeViewController.swift */,
+				B183CB24288678F40021AEA0 /* StatsViewController.swift */,
+				B1B28BEC28A3757A00639ABC /* PushUpViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		B1B7459A28A4854C00AB9038 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B1B7459B28A4855E00AB9038 /* Cells */,
+				B11E47D92887D27600777051 /* PSSPButton.swift */,
+				B11E47DD2889E6F800777051 /* PSSPTextField.swift */,
+				B1B7459E28A48ECA00AB9038 /* PSSPLabel.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B1B7459B28A4855E00AB9038 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				B16776B0288CA5FF00C73592 /* PSSPHomeCollectionViewCell.swift */,
+				B1B7459C28A48DF300AB9038 /* PSSPStatsCollectionViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		B1E7EFC8288298890081AEB3 = {
 			isa = PBXGroup;
 			children = (
@@ -76,11 +112,8 @@
 		B1E7EFD3288298890081AEB3 /* PSSP */ = {
 			isa = PBXGroup;
 			children = (
-				B183CB22288678D10021AEA0 /* HomeViewController.swift */,
-				B183CB24288678F40021AEA0 /* StatsViewController.swift */,
-				B11E47D92887D27600777051 /* PSSPButton.swift */,
-				B11E47DD2889E6F800777051 /* PSSPTextField.swift */,
-				B16776B0288CA5FF00C73592 /* PSSPCollectionViewCell.swift */,
+				B1B28BEE28A3758D00639ABC /* Controllers */,
+				B1B7459A28A4854C00AB9038 /* Views */,
 				B11E47D62887CB8900777051 /* Support */,
 				B1E7EFE22882988C0081AEB3 /* Info.plist */,
 			);
@@ -161,10 +194,13 @@
 				B11E47DA2887D27600777051 /* PSSPButton.swift in Sources */,
 				B11E47DE2889E6F800777051 /* PSSPTextField.swift in Sources */,
 				B1E7EFD7288298890081AEB3 /* SceneDelegate.swift in Sources */,
-				B16776B1288CA5FF00C73592 /* PSSPCollectionViewCell.swift in Sources */,
+				B16776B1288CA5FF00C73592 /* PSSPHomeCollectionViewCell.swift in Sources */,
 				B183CB25288678F40021AEA0 /* StatsViewController.swift in Sources */,
 				B11E47D82887CBAC00777051 /* AppColors.swift in Sources */,
 				B183CB23288678D10021AEA0 /* HomeViewController.swift in Sources */,
+				B1B7459F28A48ECA00AB9038 /* PSSPLabel.swift in Sources */,
+				B1B7459D28A48DF300AB9038 /* PSSPStatsCollectionViewCell.swift in Sources */,
+				B1B28BED28A3757A00639ABC /* PushUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

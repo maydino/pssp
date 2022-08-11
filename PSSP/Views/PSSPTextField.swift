@@ -31,6 +31,7 @@ class PSSPTextField: UITextField {
         font = UIFont.preferredFont(forTextStyle: .title1)
         adjustsFontSizeToFitWidth = true
         minimumFontSize = 10
+        returnKeyType = .done
         
         backgroundColor = .systemBlue
         autocorrectionType = .no

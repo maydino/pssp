@@ -12,14 +12,12 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     private let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.backgroundColor = .backgroundColorFirst
         
-        collectionView.register(PSSPCollectionViewCell.self, forCellWithReuseIdentifier: PSSPCollectionViewCell.identifier)
+        collectionView.register(PSSPHomeCollectionViewCell.self, forCellWithReuseIdentifier: PSSPHomeCollectionViewCell.identifier)
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.frame = view.frame
@@ -38,10 +36,9 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PSSPCollectionViewCell.identifier, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PSSPHomeCollectionViewCell.identifier, for: indexPath)
         return cell
     }
-    
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt: IndexPath) ->CGSize {
         return CGSize(
@@ -66,8 +63,6 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         collectionView.deselectItem(at: indexPath, animated: true)
         print("Selected a section: \(indexPath.section) X \(indexPath.row)")
     }
-    
-    
    
 
 }

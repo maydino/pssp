@@ -30,7 +30,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func createStatsNavigationController() -> UINavigationController {
         let statsVC = StatsViewController()
         statsVC.title = "Stats"
-        statsVC.tabBarItem = UITabBarItem(tabBarSystemItem: .history, tag: 1)
+        statsVC.tabBarItem = UITabBarItem(title: "Stats", image: UIImage(named: "stats"), tag: 1)
         return UINavigationController(rootViewController: statsVC)
     }
     

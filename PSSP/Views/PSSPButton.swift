@@ -29,6 +29,7 @@ class PSSPButton: UIButton {
     
     private func configure() {
         layer.cornerRadius = 10
+        clipsToBounds = true
         titleLabel?.textColor = .white
         titleLabel?.font = UIFont.preferredFont(forTextStyle: .title1)
         translatesAutoresizingMaskIntoConstraints = false
