@@ -17,31 +17,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         window = UIWindow(windowScene: windowScene)
         window?.makeKeyAndVisible()
-        window?.rootViewController = createTabBar()
+        window?.rootViewController = MainTabBarController()
     }
     
-    func createHomeNavigationController() -> UINavigationController {
-        let homeVC = HomeViewController()
-        homeVC.title = "Home"
-        homeVC.tabBarItem = UITabBarItem(title: "Home", image: UIImage(named: "home"), tag: 0)
-        return UINavigationController(rootViewController: homeVC)
-    }
-    
-    func createStatsNavigationController() -> UINavigationController {
-        let statsVC = StatsViewController()
-        statsVC.title = "Stats"
-        statsVC.tabBarItem = UITabBarItem(title: "Stats", image: UIImage(named: "stats"), tag: 1)
-        return UINavigationController(rootViewController: statsVC)
-    }
-    
-    func createTabBar() -> UITabBarController {
-        let tabBar = UITabBarController()
-        UITabBar.appearance().tintColor = .systemRed
-        UITabBar.appearance().unselectedItemTintColor = .systemBackground
-        UITabBar.appearance().backgroundColor = .blueColor
-        tabBar.viewControllers = [createHomeNavigationController(), createStatsNavigationController()]
-        return tabBar
-    }
+
     
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.
