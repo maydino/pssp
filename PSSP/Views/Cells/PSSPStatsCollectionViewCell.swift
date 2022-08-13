@@ -16,7 +16,6 @@ class PSSPStatsCollectionViewCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        layer.backgroundColor = UIColor.white.cgColor
         configure()
         shadows()
     }
@@ -32,6 +31,7 @@ class PSSPStatsCollectionViewCell: UICollectionViewCell {
     
     private func configure() {
         addSubview(thirtyLabel)
+        layer.backgroundColor = UIColor.collectionViewColor?.cgColor
         
         NSLayoutConstraint.activate([
             thirtyLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10),
@@ -44,10 +44,9 @@ class PSSPStatsCollectionViewCell: UICollectionViewCell {
         
         layer.cornerRadius = 10
         layer.shadowRadius = 5
-        layer.shadowColor = UIColor.white.cgColor
+        layer.shadowColor = UIColor.shadowColor?.cgColor
         layer.shadowOpacity = 0.5
         layer.shadowOffset = CGSize(width: 4, height: 4)
-        layer.backgroundColor = UIColor.blueColor.cgColor
         layer.masksToBounds = false
         
     }

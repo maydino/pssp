@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B11E47D82887CBAC00777051 /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11E47D72887CBAC00777051 /* AppColors.swift */; };
 		B11E47DA2887D27600777051 /* PSSPButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11E47D92887D27600777051 /* PSSPButton.swift */; };
 		B11E47DE2889E6F800777051 /* PSSPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11E47DD2889E6F800777051 /* PSSPTextField.swift */; };
 		B16776B1288CA5FF00C73592 /* PSSPHomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16776B0288CA5FF00C73592 /* PSSPHomeCollectionViewCell.swift */; };
@@ -17,6 +16,7 @@
 		B1B7459D28A48DF300AB9038 /* PSSPStatsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B7459C28A48DF300AB9038 /* PSSPStatsCollectionViewCell.swift */; };
 		B1B7459F28A48ECA00AB9038 /* PSSPLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B7459E28A48ECA00AB9038 /* PSSPLabel.swift */; };
 		B1E38D0C28A5D9A400737933 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E38D0B28A5D9A400737933 /* MainTabBarController.swift */; };
+		B1E38D0E28A7459400737933 /* PSSPColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E38D0D28A7459400737933 /* PSSPColors.swift */; };
 		B1E7EFD5288298890081AEB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E7EFD4288298890081AEB3 /* AppDelegate.swift */; };
 		B1E7EFD7288298890081AEB3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E7EFD6288298890081AEB3 /* SceneDelegate.swift */; };
 		B1E7EFDE2882988C0081AEB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1E7EFDD2882988C0081AEB3 /* Assets.xcassets */; };
@@ -24,7 +24,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B11E47D72887CBAC00777051 /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
 		B11E47D92887D27600777051 /* PSSPButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSSPButton.swift; sourceTree = "<group>"; };
 		B11E47DD2889E6F800777051 /* PSSPTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSSPTextField.swift; sourceTree = "<group>"; };
 		B16776B0288CA5FF00C73592 /* PSSPHomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSSPHomeCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -34,6 +33,7 @@
 		B1B7459C28A48DF300AB9038 /* PSSPStatsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSSPStatsCollectionViewCell.swift; sourceTree = "<group>"; };
 		B1B7459E28A48ECA00AB9038 /* PSSPLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSSPLabel.swift; sourceTree = "<group>"; };
 		B1E38D0B28A5D9A400737933 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		B1E38D0D28A7459400737933 /* PSSPColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSSPColors.swift; sourceTree = "<group>"; };
 		B1E7EFD1288298890081AEB3 /* PSSP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PSSP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1E7EFD4288298890081AEB3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B1E7EFD6288298890081AEB3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,11 +56,11 @@
 		B11E47D62887CB8900777051 /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				B1E38D0D28A7459400737933 /* PSSPColors.swift */,
 				B1E7EFDD2882988C0081AEB3 /* Assets.xcassets */,
 				B1E7EFDF2882988C0081AEB3 /* LaunchScreen.storyboard */,
 				B1E7EFD4288298890081AEB3 /* AppDelegate.swift */,
 				B1E7EFD6288298890081AEB3 /* SceneDelegate.swift */,
-				B11E47D72887CBAC00777051 /* AppColors.swift */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -68,10 +68,10 @@
 		B1B28BEE28A3758D00639ABC /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				B1E38D0B28A5D9A400737933 /* MainTabBarController.swift */,
 				B183CB22288678D10021AEA0 /* HomeViewController.swift */,
 				B183CB24288678F40021AEA0 /* StatsViewController.swift */,
 				B1B28BEC28A3757A00639ABC /* PushUpViewController.swift */,
-				B1E38D0B28A5D9A400737933 /* MainTabBarController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -200,7 +200,7 @@
 				B1E7EFD7288298890081AEB3 /* SceneDelegate.swift in Sources */,
 				B16776B1288CA5FF00C73592 /* PSSPHomeCollectionViewCell.swift in Sources */,
 				B183CB25288678F40021AEA0 /* StatsViewController.swift in Sources */,
-				B11E47D82887CBAC00777051 /* AppColors.swift in Sources */,
+				B1E38D0E28A7459400737933 /* PSSPColors.swift in Sources */,
 				B183CB23288678D10021AEA0 /* HomeViewController.swift in Sources */,
 				B1B7459F28A48ECA00AB9038 /* PSSPLabel.swift in Sources */,
 				B1B7459D28A48DF300AB9038 /* PSSPStatsCollectionViewCell.swift in Sources */,

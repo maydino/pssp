@@ -12,9 +12,13 @@ class MainTabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        UITabBar.appearance().tintColor = .systemRed
+        UITabBar.appearance().tintColor = .textColor
         UITabBar.appearance().unselectedItemTintColor = .systemBackground
-        UITabBar.appearance().backgroundColor = .blueColor
+        UITabBar.appearance().backgroundColor = .tabBarColor
+        
+        
+        
+//        UINavigationBar.appearance().backgroundColor = .tabBarColor
         
         setViewControllers([createHomeNavigationController(),createStatsNavigationController()], animated: true)
     }
@@ -32,6 +36,8 @@ class MainTabBarController: UITabBarController {
         statsVC.tabBarItem = UITabBarItem(title: "Stats", image: UIImage(named: "stats"), tag: 1)
         return UINavigationController(rootViewController: statsVC)
     }
+    
+    
 
 
 }

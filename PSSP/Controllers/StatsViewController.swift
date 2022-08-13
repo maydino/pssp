@@ -14,13 +14,12 @@ class StatsViewController: UIViewController, UICollectionViewDelegate, UICollect
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .backgroundColorFirst
         
         collectionView.register(PSSPStatsCollectionViewCell.self, forCellWithReuseIdentifier: PSSPStatsCollectionViewCell.identifier)
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.frame = view.frame
-        collectionView.backgroundColor = .backgroundColorFirst
+        collectionView.backgroundColor = .collectionViewColor
 
         view.addSubview(collectionView)
         

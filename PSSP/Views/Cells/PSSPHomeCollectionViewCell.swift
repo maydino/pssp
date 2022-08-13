@@ -11,13 +11,11 @@ class PSSPHomeCollectionViewCell: UICollectionViewCell {
     
     static let identifier = "PSSPCollectionViewCell"
     
-//    private let buttonView = PSSPButton()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-//        contentView.addSubview(buttonView)
-        layer.backgroundColor = UIColor.white.cgColor
+        layer.backgroundColor = UIColor.collectionViewColor?.cgColor
         configure()
         shadows()
     }
@@ -28,7 +26,6 @@ class PSSPHomeCollectionViewCell: UICollectionViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-//        buttonView.frame = contentView.bounds
     }
     
     override func prepareForReuse() {
@@ -39,14 +36,15 @@ class PSSPHomeCollectionViewCell: UICollectionViewCell {
     private func configure() {
         layer.cornerRadius = 10
         clipsToBounds = true
+        layer.backgroundColor = UIColor.collectionViewColor?.cgColor
+
     }
     private func shadows() {
         layer.cornerRadius = 10
         layer.shadowRadius = 5
-        layer.shadowColor = UIColor.white.cgColor
+        layer.shadowColor = UIColor.shadowColor?.cgColor
         layer.shadowOpacity = 0.5
         layer.shadowOffset = CGSize(width: 4, height: 4)
-        layer.backgroundColor = UIColor.blueColor.cgColor
         layer.masksToBounds = false
         
     }
