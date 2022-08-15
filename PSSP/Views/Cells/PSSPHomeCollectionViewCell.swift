@@ -15,7 +15,6 @@ class PSSPHomeCollectionViewCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        layer.backgroundColor = UIColor.collectionViewColor?.cgColor
         configure()
         shadows()
     }
