@@ -12,7 +12,7 @@ class PushUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .backgroundColor
+        view.backgroundColor = .psspBackgroundColor
         
 
     }

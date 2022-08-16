@@ -14,5 +14,5 @@ extension UIColor {
     static let textColor = UIColor(named: "textColor")
     static let collectionViewColor = UIColor(named: "collectionViewColor")
     static let shadowColor = UIColor(named: "shadowColor")
-    static let backgroundColor = UIColor(named: "backgroundColor")
+    static let psspBackgroundColor = UIColor(named: "psspBackgroundColor")
 }
