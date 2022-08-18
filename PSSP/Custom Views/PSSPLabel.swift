@@ -32,7 +32,6 @@ class PSSPLabel: UILabel {
         minimumScaleFactor = 0.9
         lineBreakMode = .byTruncatingTail
         translatesAutoresizingMaskIntoConstraints = false
-
         
     }
 }

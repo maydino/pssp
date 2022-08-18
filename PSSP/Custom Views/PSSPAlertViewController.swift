@@ -12,7 +12,7 @@ class PSSPAlertViewController: UIViewController {
     let containerView = UIView()
     let titleLabel = PSSPTitleLabel(textAlignment: .center, fontSize: 20)
     let messageLabel = PSSPBodyLabel(textAlignment: .center)
-    let actionButton = PSSPButton(backgroundColor: .systemGray, title: "Ok")
+    let actionButton = PSSPButton(backgroundColor: .psspBackgroundColor!)
     
     var alertTitle: String?
     var message: String?
@@ -22,7 +22,8 @@ class PSSPAlertViewController: UIViewController {
     
     init (title: String, message: String, buttonTitle: String) {
         super .init(nibName: nil, bundle: nil)
-        self.title = title
+
+        self.alertTitle = title
         self.message = message
         self.buttonTitle = buttonTitle
         
@@ -47,32 +48,29 @@ class PSSPAlertViewController: UIViewController {
         containerView.backgroundColor = .psspBackgroundColor
         containerView.layer.cornerRadius = 12
         containerView.layer.borderWidth = 2
-        containerView.layer.borderColor = UIColor.white.cgColor
+        containerView.layer.borderColor = UIColor.shadowColor?.cgColor
         containerView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-        
             containerView.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 0),
             containerView.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 0),
-            containerView.widthAnchor.constraint(equalToConstant: view.bounds.width/2),
-            containerView.heightAnchor.constraint(equalToConstant: view.bounds.height/4)
-            
+            containerView.widthAnchor.constraint(equalToConstant: view.bounds.width/1.5),
+            containerView.heightAnchor.constraint(equalToConstant: view.bounds.height/3)
         ])
     }
     
     func configureTitleLabel() {
         containerView.addSubview(titleLabel)
         titleLabel.text = alertTitle ?? "Oppps! Try again."
+        titleLabel.textColor = .systemGray
         
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-        
-            titleLabel.centerYAnchor.constraint(equalTo: containerView.topAnchor, constant: padding),
-            titleLabel.leadingAnchor.constraint(equalTo: containerView.centerXAnchor, constant: padding),
+            titleLabel.topAnchor.constraint(equalTo: containerView.topAnchor, constant: padding),
+            titleLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: padding),
             titleLabel.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -padding),
-            titleLabel.heightAnchor.constraint(equalToConstant: view.bounds.height / 5)
-            
+            titleLabel.heightAnchor.constraint(equalToConstant: 30)
         ])
     }
     
@@ -80,29 +78,29 @@ class PSSPAlertViewController: UIViewController {
         
         containerView.addSubview(actionButton)
         actionButton.setTitle(buttonTitle ?? "Ok", for: .normal)
+        actionButton.setTitleColor(.systemGray, for: .normal)
         actionButton.addTarget(self, action: #selector(dismissViewController), for: .touchUpInside)
-        
+
         NSLayoutConstraint.activate([
-            actionButton.centerXAnchor.constraint(equalTo: containerView.centerXAnchor, constant: 0),
-            actionButton.leadingAnchor.constraint(equalTo: containerView.centerXAnchor, constant: padding),
+            actionButton.heightAnchor.constraint(equalToConstant: 30),
+            actionButton.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: padding),
             actionButton.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -padding),
-            actionButton.heightAnchor.constraint(equalToConstant: 28)
-            
+            actionButton.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -10)
         ])
-        
     }
     
     func configureMessageLabel() {
         
         containerView.addSubview(messageLabel)
         messageLabel.text = message ?? "Opps! with body label"
+        messageLabel.textColor = .systemGray
         messageLabel.numberOfLines = 4
         
         NSLayoutConstraint.activate([
-            messageLabel.centerXAnchor.constraint(equalTo: titleLabel.centerXAnchor, constant: 0),
-            messageLabel.leadingAnchor.constraint(equalTo: containerView.centerXAnchor, constant: padding),
+            messageLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 10),
+            messageLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: padding),
             messageLabel.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -padding),
-            messageLabel.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -padding),
+            messageLabel.bottomAnchor.constraint(equalTo: actionButton.topAnchor, constant: -10),
         ])
         
     }

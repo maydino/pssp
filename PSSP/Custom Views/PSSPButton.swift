@@ -19,10 +19,9 @@ class PSSPButton: UIButton {
         fatalError("init(coder:) has not been implemented")
     }
     
-    init(backgroundColor: UIColor, title: String) {
+    init(backgroundColor: UIColor) {
         super.init(frame: .zero)
-        self.backgroundColor = backgroundColor
-        self.setTitle(title, for: .normal)
+        self.backgroundColor = .psspBackgroundColor
         configure()
         shadows()
     }
@@ -30,12 +29,11 @@ class PSSPButton: UIButton {
     private func configure() {
         layer.cornerRadius = 10
         clipsToBounds = true
-        titleLabel?.textColor = .white
+        titleLabel?.textColor = .label
         titleLabel?.font = UIFont.preferredFont(forTextStyle: .title1)
         translatesAutoresizingMaskIntoConstraints = false
     }
     private func shadows() {
-        layer.cornerRadius = 10
         layer.shadowRadius = 5
         layer.shadowColor = UIColor.shadowColor?.cgColor
         layer.shadowOpacity = 0.5
