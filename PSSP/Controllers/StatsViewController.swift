@@ -19,7 +19,7 @@ class StatsViewController: UIViewController, UICollectionViewDelegate, UICollect
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.frame = view.frame
-        collectionView.backgroundColor = .collectionViewColor
+        collectionView.backgroundColor = .systemBackground
 
         view.addSubview(collectionView)
         
@@ -56,13 +56,5 @@ class StatsViewController: UIViewController, UICollectionViewDelegate, UICollect
         return UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
     }
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        collectionView.deselectItem(at: indexPath, animated: true)
-        print("Selected a section: \(indexPath.section) X \(indexPath.row)")
-    }
-   
-
-
-
 
 }

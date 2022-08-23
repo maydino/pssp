@@ -12,7 +12,7 @@ extension UIColor {
     
     static let tabBarColor = UIColor(named: "tabBarColor")
     static let textColor = UIColor(named: "textColor")
-    static let collectionViewColor = UIColor(named: "collectionViewColor")
+    static let psspCollectionCellColor = UIColor(named: "psspCollectionCellColor")
     static let shadowColor = UIColor(named: "shadowColor")
     static let psspBackgroundColor = UIColor(named: "psspBackgroundColor")
 }

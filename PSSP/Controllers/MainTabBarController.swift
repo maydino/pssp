@@ -8,6 +8,8 @@
 import UIKit
 
 class MainTabBarController: UITabBarController {
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,12 +17,11 @@ class MainTabBarController: UITabBarController {
         UITabBar.appearance().tintColor = .textColor
         UITabBar.appearance().unselectedItemTintColor = .systemBackground
         UITabBar.appearance().backgroundColor = .tabBarColor
-        
-        
-        
-//        UINavigationBar.appearance().backgroundColor = .tabBarColor
-        
+                
         setViewControllers([createHomeNavigationController(),createStatsNavigationController()], animated: true)
+        
+        presentPSSPAlertOnMainThread(title: "test", message: "just testing", buttonTitle: "It worked!")
+
     }
     
     func createHomeNavigationController() -> UINavigationController {

@@ -35,7 +35,7 @@ class PSSPHomeCollectionViewCell: UICollectionViewCell {
     private func configure() {
         layer.cornerRadius = 10
         clipsToBounds = true
-        layer.backgroundColor = UIColor.collectionViewColor?.cgColor
+        layer.backgroundColor = UIColor.psspCollectionCellColor?.cgColor
 
     }
     private func shadows() {

@@ -31,7 +31,7 @@ class PSSPStatsCollectionViewCell: UICollectionViewCell {
     
     private func configure() {
         addSubview(thirtyLabel)
-        layer.backgroundColor = UIColor.collectionViewColor?.cgColor
+        layer.backgroundColor = UIColor.psspCollectionCellColor?.cgColor
         
         NSLayoutConstraint.activate([
             thirtyLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10),
