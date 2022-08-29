@@ -16,8 +16,7 @@ class PSSPHomeCollectionViewCell: UICollectionViewCell {
         super.init(frame: frame)
         
         configure()
-        shadows()
-    }
+        dropShadow(color: .shadowColor!, opacity: 0.5, offSet: CGSize(width: 5, height: 5), radius: 6)    }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -38,15 +37,7 @@ class PSSPHomeCollectionViewCell: UICollectionViewCell {
         layer.backgroundColor = UIColor.psspCollectionCellColor?.cgColor
 
     }
-    private func shadows() {
-        layer.cornerRadius = 10
-        layer.shadowRadius = 5
-        layer.shadowColor = UIColor.shadowColor?.cgColor
-        layer.shadowOpacity = 0.5
-        layer.shadowOffset = CGSize(width: 4, height: 4)
-        layer.masksToBounds = false
-        
-    }
+    
     
     
     

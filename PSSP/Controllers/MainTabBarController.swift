@@ -9,7 +9,6 @@ import UIKit
 
 class MainTabBarController: UITabBarController {
     
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +19,7 @@ class MainTabBarController: UITabBarController {
                 
         setViewControllers([createHomeNavigationController(),createStatsNavigationController()], animated: true)
         
-        presentPSSPAlertOnMainThread(title: "test", message: "just testing", buttonTitle: "It worked!")
+//        presentPSSPAlertOnMainThread(title: "test", message: "just testing", buttonTitle: "It worked!")
 
     }
     

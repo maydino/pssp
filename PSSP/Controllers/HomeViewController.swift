@@ -29,7 +29,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.frame = view.frame
-        collectionView.backgroundColor = .systemBackground
+        collectionView.backgroundColor = .psspBackgroundColor
 
         view.addSubview(collectionView)
         
@@ -71,6 +71,12 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     func vcController (item: Int) -> UIViewController {
         if item == 0 {
             return PushUpViewController()
+        } else if item == 1 {
+            return SitUpViewController()
+        } else if item == 2 {
+            return SquatViewController()
+        } else if item == 3 {
+            return PlankViewController()
         } else {
             print("on the way")
             return UIViewController()

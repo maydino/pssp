@@ -9,31 +9,31 @@ import UIKit
 
 class PSSPTextField: UITextField {
 
+
     override init(frame: CGRect) {
         super.init(frame: frame)
+        
+        textFieldConfigure()
+
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func configure() {
-        
-        translatesAutoresizingMaskIntoConstraints = false
-        
-        layer.cornerRadius = 10
-        layer.borderColor = UIColor.systemPink.cgColor
-        layer.borderWidth = 2
+    private func textFieldConfigure() {
         
         textColor = .label
         tintColor = .label
+        layer.cornerRadius = 10
         textAlignment = .center
-        font = UIFont.preferredFont(forTextStyle: .title1)
+        font = UIFont.preferredFont(forTextStyle: .title2)
         adjustsFontSizeToFitWidth = true
         minimumFontSize = 10
         returnKeyType = .done
+        keyboardType = .numberPad
         
-        backgroundColor = .systemBlue
+        backgroundColor = .psspCollectionCellColor
         autocorrectionType = .no
         
         placeholder = "0"
