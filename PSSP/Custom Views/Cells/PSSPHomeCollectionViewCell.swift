@@ -11,7 +11,6 @@ class PSSPHomeCollectionViewCell: UICollectionViewCell {
     
     static let identifier = "PSSPCollectionViewCell"
     
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -37,8 +36,5 @@ class PSSPHomeCollectionViewCell: UICollectionViewCell {
         layer.backgroundColor = UIColor.psspCollectionCellColor?.cgColor
 
     }
-    
-    
-    
     
 }
