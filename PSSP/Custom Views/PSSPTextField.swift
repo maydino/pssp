@@ -31,7 +31,7 @@ class PSSPTextField: UITextField {
         adjustsFontSizeToFitWidth = true
         minimumFontSize = 10
         returnKeyType = .done
-        keyboardType = .numberPad
+        keyboardType = .asciiCapableNumberPad
         
         backgroundColor = .psspCollectionCellColor
         autocorrectionType = .no
