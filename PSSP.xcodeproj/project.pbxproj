@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		B11E47DA2887D27600777051 /* PSSPButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11E47D92887D27600777051 /* PSSPButton.swift */; };
 		B11E47DE2889E6F800777051 /* PSSPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11E47DD2889E6F800777051 /* PSSPTextField.swift */; };
-		B14B199428BDA08900985E22 /* UtilityFuncs.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14B199328BDA08900985E22 /* UtilityFuncs.swift */; };
 		B16776B1288CA5FF00C73592 /* PSSPHomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16776B0288CA5FF00C73592 /* PSSPHomeCollectionViewCell.swift */; };
 		B183CB23288678D10021AEA0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B183CB22288678D10021AEA0 /* HomeViewController.swift */; };
 		B183CB25288678F40021AEA0 /* StatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B183CB24288678F40021AEA0 /* StatsViewController.swift */; };
@@ -36,7 +35,6 @@
 /* Begin PBXFileReference section */
 		B11E47D92887D27600777051 /* PSSPButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSSPButton.swift; sourceTree = "<group>"; };
 		B11E47DD2889E6F800777051 /* PSSPTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSSPTextField.swift; sourceTree = "<group>"; };
-		B14B199328BDA08900985E22 /* UtilityFuncs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilityFuncs.swift; sourceTree = "<group>"; };
 		B16776B0288CA5FF00C73592 /* PSSPHomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSSPHomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		B183CB22288678D10021AEA0 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		B183CB24288678F40021AEA0 /* StatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsViewController.swift; sourceTree = "<group>"; };
@@ -88,7 +86,6 @@
 			isa = PBXGroup;
 			children = (
 				B1E38D0D28A7459400737933 /* PSSPColors.swift */,
-				B14B199328BDA08900985E22 /* UtilityFuncs.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -255,7 +252,6 @@
 				B1E38D0C28A5D9A400737933 /* MainTabBarController.swift in Sources */,
 				B11E47DE2889E6F800777051 /* PSSPTextField.swift in Sources */,
 				B1DB569028B689F700DAEA47 /* CounterView.swift in Sources */,
-				B14B199428BDA08900985E22 /* UtilityFuncs.swift in Sources */,
 				B1DB569328BBBED600DAEA47 /* SitUpViewController.swift in Sources */,
 				B1DB569728BBBFDA00DAEA47 /* SquatViewController.swift in Sources */,
 				B1E7EFD7288298890081AEB3 /* SceneDelegate.swift in Sources */,

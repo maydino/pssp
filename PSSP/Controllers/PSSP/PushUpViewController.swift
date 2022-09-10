@@ -45,7 +45,7 @@ class PushUpViewController: UIViewController {
         
         NSLayoutConstraint.activate([
             pushUpImage.widthAnchor.constraint(equalToConstant: view.bounds.width*0.6),
-            pushUpImage.topAnchor.constraint(equalTo: view.topAnchor, constant: 20),
+            pushUpImage.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
             pushUpImage.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 0),
             pushUpImage.heightAnchor.constraint(equalToConstant: view.bounds.width*0.6)
         ])

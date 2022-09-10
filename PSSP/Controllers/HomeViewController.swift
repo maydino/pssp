@@ -9,6 +9,8 @@ import UIKit
 
 class HomeViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
+    var selectedNavigationControllerTitle: String?
+    
     
     private let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
     
@@ -64,24 +66,38 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         let selection = indexPath.item
         print(selection)
         let pushUpViewController = vcController(item: indexPath.item)
+        pushUpViewController.title = selectedNavigationControllerTitle
+        pushUpViewController.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(dismissSelf))
+
+        
         let navigationController = UINavigationController(rootViewController: pushUpViewController)
+        navigationController.modalPresentationStyle = .overFullScreen
+
         present(navigationController, animated: true)
     }
     
     func vcController (item: Int) -> UIViewController {
         if item == 0 {
+            selectedNavigationControllerTitle = "Push Up"
             return PushUpViewController()
         } else if item == 1 {
+            selectedNavigationControllerTitle = "Sit Up"
             return SitUpViewController()
         } else if item == 2 {
+            selectedNavigationControllerTitle = "Squat"
             return SquatViewController()
         } else if item == 3 {
+            ///!!!!!!!!!!!!
             return PlankViewController()
         } else {
             print("on the way")
             return UIViewController()
         }
         
+    }
+    
+    @objc func dismissSelf() {
+        self.dismiss(animated: true)
     }
     
     
