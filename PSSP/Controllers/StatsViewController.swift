@@ -7,8 +7,9 @@
 
 import UIKit
 
-class StatsViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+final class StatsViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
+    // Collection View Property
     private let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
     
     override func viewDidLoad() {
@@ -26,7 +27,7 @@ class StatsViewController: UIViewController, UICollectionViewDelegate, UICollect
     }
     
     
-    //MARK: - Collection View
+    //MARK: - Collection View Set Up
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 4

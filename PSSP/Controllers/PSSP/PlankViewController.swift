@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PlankViewController: UIViewController {
+final class PlankViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -7,9 +7,9 @@
 
 import UIKit
 
-class PushUpViewController: UIViewController {
+final class PushUpViewController: UIViewController {
 
-    var sevenDaysAverage = UtilityFuncs()
+    var sevenDaysAverage = MemoryManagement()
     
     private let pushUpImage: UIImageView = {
         let image = UIImageView()
@@ -21,8 +21,11 @@ class PushUpViewController: UIViewController {
     private let enterCompletedLabel = PSSPLabel()
     private let pushUpTextField = PSSPTextField()
     private let sevenDaysAvgLabel = PSSPLabel()
+    
+    private let sevenDaysAvgCountLabel = PSSPLabel()
+    
     private let thirtyDaysAvgLabel = PSSPLabel()
-
+    private let thirtyDaysAvgCountLabel = PSSPLabel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,10 +37,15 @@ class PushUpViewController: UIViewController {
 
         pushUpTextFieldConfiguration()
         sevenDaysAvgLabelConfiguration()
+        sevenDaysAvgCountLabelConfiguration()
         thirtyDaysAvgLabelConfiguration()
+        thirtyDaysAvgCountLabelConfiguration()
 
     }
    
+    // MARK: - UI Configuration Functions
+    
+    // Push Up Image View Configuration
     func pushUpImageConfiguration() {
         view.addSubview(pushUpImage)
         pushUpImage.layer.cornerRadius = 10
@@ -51,6 +59,7 @@ class PushUpViewController: UIViewController {
         ])
     }
     
+    // Enter Completed Push Ups Label Configuration
     func completedLabelConfiguration() {
         enterCompletedLabel.translatesAutoresizingMaskIntoConstraints = false
         enterCompletedLabel.text = "Enter Completed Push Ups"
@@ -66,6 +75,7 @@ class PushUpViewController: UIViewController {
         ])
     }
     
+    // Push Up Text Field Configuration
     func pushUpTextFieldConfiguration() {
         pushUpTextField.translatesAutoresizingMaskIntoConstraints = false
 
@@ -79,31 +89,59 @@ class PushUpViewController: UIViewController {
         ])
     }
     
+    // Seven Days Average Label Configuration
     func sevenDaysAvgLabelConfiguration() {
         sevenDaysAvgLabel.translatesAutoresizingMaskIntoConstraints = false
-        sevenDaysAvgLabel.text = "Seven Days: \(sevenDaysAverage.sevenDaysAverage()) "
+        sevenDaysAvgLabel.text = "Seven Days Average"
                 
         view.addSubview(sevenDaysAvgLabel)
         
         NSLayoutConstraint.activate([
-            sevenDaysAvgLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 100),
-            sevenDaysAvgLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -100),
+            sevenDaysAvgLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 0),
             sevenDaysAvgLabel.topAnchor.constraint(equalTo: pushUpTextField.bottomAnchor, constant: 50),
             sevenDaysAvgLabel.heightAnchor.constraint(equalToConstant: 25)
         ])
     }
     
+    // Seven Days Average Count Label Configuration
+    func sevenDaysAvgCountLabelConfiguration() {
+        sevenDaysAvgCountLabel.translatesAutoresizingMaskIntoConstraints = false
+        sevenDaysAvgCountLabel.text = "\(sevenDaysAverage.userDefault.object(forKey: "todayPushes")) Place Holder"
+        
+        view.addSubview(sevenDaysAvgCountLabel)
+        
+        NSLayoutConstraint.activate([
+            sevenDaysAvgCountLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 0),
+            sevenDaysAvgCountLabel.topAnchor.constraint(equalTo: sevenDaysAvgLabel.bottomAnchor, constant: 15),
+            sevenDaysAvgCountLabel.heightAnchor.constraint(equalToConstant: 25)
+        ])
+    }
+    
+    // Thirty Days Average Label Configuration
     func thirtyDaysAvgLabelConfiguration() {
         thirtyDaysAvgLabel.translatesAutoresizingMaskIntoConstraints = false
-        thirtyDaysAvgLabel.text = "Thirty Days: \(sevenDaysAverage.sevenDaysAverage()) "
+        thirtyDaysAvgLabel.text = "Thirty Days"
         
         view.addSubview(thirtyDaysAvgLabel)
         
         NSLayoutConstraint.activate([
-            thirtyDaysAvgLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 100),
-            thirtyDaysAvgLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -100),
-            thirtyDaysAvgLabel.topAnchor.constraint(equalTo: sevenDaysAvgLabel.bottomAnchor, constant: 25),
+            thirtyDaysAvgLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 0),
+            thirtyDaysAvgLabel.topAnchor.constraint(equalTo: sevenDaysAvgCountLabel.bottomAnchor, constant: 25),
             thirtyDaysAvgLabel.heightAnchor.constraint(equalToConstant: 25)
+        ])
+    }
+    
+    // Thirty Days Average Count Label Configuration
+    func thirtyDaysAvgCountLabelConfiguration() {
+        thirtyDaysAvgCountLabel.translatesAutoresizingMaskIntoConstraints = false
+        thirtyDaysAvgCountLabel.text = "\(sevenDaysAverage.userDefault.object(forKey: "todayPushes")) Place Holder"
+        
+        view.addSubview(thirtyDaysAvgCountLabel)
+        
+        NSLayoutConstraint.activate([
+            thirtyDaysAvgCountLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 0),
+            thirtyDaysAvgCountLabel.topAnchor.constraint(equalTo: thirtyDaysAvgLabel.bottomAnchor, constant: 15),
+            thirtyDaysAvgCountLabel.heightAnchor.constraint(equalToConstant: 25)
         ])
     }
     

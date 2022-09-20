@@ -7,11 +7,11 @@
 
 import UIKit
 
-class HomeViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+final class HomeViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     var selectedNavigationControllerTitle: String?
     
-    
+    // Collection View Property
     private let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
     
 
@@ -23,7 +23,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     }
  
     
-    //MARK: - Collection View
+    //MARK: - Collection View Set Up
     
     func configureCollectionView(){
         
@@ -65,7 +65,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         print("Selected a section: \(indexPath.section) X \(indexPath.row)")
         let selection = indexPath.item
         print(selection)
-        let pushUpViewController = vcController(item: indexPath.item)
+        let pushUpViewController = collectionViewCellPressedAction(item: indexPath.item)
         pushUpViewController.title = selectedNavigationControllerTitle
         pushUpViewController.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(dismissSelf))
 
@@ -76,7 +76,8 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         present(navigationController, animated: true)
     }
     
-    func vcController (item: Int) -> UIViewController {
+    // Collection View Cell Pressed Action Function
+    func collectionViewCellPressedAction (item: Int) -> UIViewController {
         if item == 0 {
             selectedNavigationControllerTitle = "Push Up"
             return PushUpViewController()
@@ -90,7 +91,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
             ///!!!!!!!!!!!!
             return PlankViewController()
         } else {
-            print("on the way")
+            print("Something Wrong!")
             return UIViewController()
         }
         

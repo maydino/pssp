@@ -15,7 +15,7 @@
 		B1B28BED28A3757A00639ABC /* PushUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B28BEC28A3757A00639ABC /* PushUpViewController.swift */; };
 		B1B7459D28A48DF300AB9038 /* PSSPStatsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B7459C28A48DF300AB9038 /* PSSPStatsCollectionViewCell.swift */; };
 		B1B7459F28A48ECA00AB9038 /* PSSPLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B7459E28A48ECA00AB9038 /* PSSPLabel.swift */; };
-		B1DB569028B689F700DAEA47 /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DB568F28B689F700DAEA47 /* CounterView.swift */; };
+		B1C5360128DA130C002045E1 /* SevenAndThirtyDaysContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C5360028DA130C002045E1 /* SevenAndThirtyDaysContainer.swift */; };
 		B1DB569328BBBED600DAEA47 /* SitUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DB569228BBBED600DAEA47 /* SitUpViewController.swift */; };
 		B1DB569528BBBEEF00DAEA47 /* PlankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DB569428BBBEEF00DAEA47 /* PlankViewController.swift */; };
 		B1DB569728BBBFDA00DAEA47 /* SquatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DB569628BBBFDA00DAEA47 /* SquatViewController.swift */; };
@@ -30,6 +30,7 @@
 		B1E7EFD7288298890081AEB3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E7EFD6288298890081AEB3 /* SceneDelegate.swift */; };
 		B1E7EFDE2882988C0081AEB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1E7EFDD2882988C0081AEB3 /* Assets.xcassets */; };
 		B1E7EFE12882988C0081AEB3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1E7EFDF2882988C0081AEB3 /* LaunchScreen.storyboard */; };
+		B1EDC05A28D6377F007B57EB /* MemoryManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EDC05928D6377E007B57EB /* MemoryManagement.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,7 +42,7 @@
 		B1B28BEC28A3757A00639ABC /* PushUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushUpViewController.swift; sourceTree = "<group>"; };
 		B1B7459C28A48DF300AB9038 /* PSSPStatsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSSPStatsCollectionViewCell.swift; sourceTree = "<group>"; };
 		B1B7459E28A48ECA00AB9038 /* PSSPLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSSPLabel.swift; sourceTree = "<group>"; };
-		B1DB568F28B689F700DAEA47 /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
+		B1C5360028DA130C002045E1 /* SevenAndThirtyDaysContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SevenAndThirtyDaysContainer.swift; sourceTree = "<group>"; };
 		B1DB569228BBBED600DAEA47 /* SitUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitUpViewController.swift; sourceTree = "<group>"; };
 		B1DB569428BBBEEF00DAEA47 /* PlankViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlankViewController.swift; sourceTree = "<group>"; };
 		B1DB569628BBBFDA00DAEA47 /* SquatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquatViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +59,7 @@
 		B1E7EFDD2882988C0081AEB3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B1E7EFE02882988C0081AEB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B1E7EFE22882988C0081AEB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B1EDC05928D6377E007B57EB /* MemoryManagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryManagement.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				B1E38D0D28A7459400737933 /* PSSPColors.swift */,
+				B1EDC05928D6377E007B57EB /* MemoryManagement.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -113,14 +116,14 @@
 		B1B7459A28A4854C00AB9038 /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
-				B1DB568F28B689F700DAEA47 /* CounterView.swift */,
-				B1E38D1328A9DAD600737933 /* PSSPAlertViewController.swift */,
 				B1B7459B28A4855E00AB9038 /* Cells */,
+				B1E38D1328A9DAD600737933 /* PSSPAlertViewController.swift */,
 				B11E47D92887D27600777051 /* PSSPButton.swift */,
 				B11E47DD2889E6F800777051 /* PSSPTextField.swift */,
 				B1B7459E28A48ECA00AB9038 /* PSSPLabel.swift */,
 				B1E38D0F28A9512200737933 /* PSSPTitleLabel.swift */,
 				B1E38D1128A9D9DB00737933 /* PSSPBodyLabel.swift */,
+				B1C5360028DA130C002045E1 /* SevenAndThirtyDaysContainer.swift */,
 			);
 			path = "Custom Views";
 			sourceTree = "<group>";
@@ -247,17 +250,18 @@
 				B1E7EFD5288298890081AEB3 /* AppDelegate.swift in Sources */,
 				B1E38D1028A9512200737933 /* PSSPTitleLabel.swift in Sources */,
 				B1E38D1428A9DAD600737933 /* PSSPAlertViewController.swift in Sources */,
+				B1EDC05A28D6377F007B57EB /* MemoryManagement.swift in Sources */,
 				B1E38D1228A9D9DB00737933 /* PSSPBodyLabel.swift in Sources */,
 				B11E47DA2887D27600777051 /* PSSPButton.swift in Sources */,
 				B1E38D0C28A5D9A400737933 /* MainTabBarController.swift in Sources */,
 				B11E47DE2889E6F800777051 /* PSSPTextField.swift in Sources */,
-				B1DB569028B689F700DAEA47 /* CounterView.swift in Sources */,
 				B1DB569328BBBED600DAEA47 /* SitUpViewController.swift in Sources */,
 				B1DB569728BBBFDA00DAEA47 /* SquatViewController.swift in Sources */,
 				B1E7EFD7288298890081AEB3 /* SceneDelegate.swift in Sources */,
 				B16776B1288CA5FF00C73592 /* PSSPHomeCollectionViewCell.swift in Sources */,
 				B1DB569C28BC72C700DAEA47 /* UIView+Ext.swift in Sources */,
 				B183CB25288678F40021AEA0 /* StatsViewController.swift in Sources */,
+				B1C5360128DA130C002045E1 /* SevenAndThirtyDaysContainer.swift in Sources */,
 				B1DB569528BBBEEF00DAEA47 /* PlankViewController.swift in Sources */,
 				B1E38D0E28A7459400737933 /* PSSPColors.swift in Sources */,
 				B183CB23288678D10021AEA0 /* HomeViewController.swift in Sources */,

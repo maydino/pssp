@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SitUpViewController: UIViewController {
+final class SitUpViewController: UIViewController {
     
     let button = UIButton()
 

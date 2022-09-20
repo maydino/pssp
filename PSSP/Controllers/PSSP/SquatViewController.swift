@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SquatViewController: UIViewController {
+final class SquatViewController: UIViewController {
     
     let pushUpImage: UIImageView = {
         let image = UIImageView()
