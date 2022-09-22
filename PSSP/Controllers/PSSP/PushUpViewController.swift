@@ -20,12 +20,9 @@ final class PushUpViewController: UIViewController {
     
     private let enterCompletedLabel = PSSPLabel()
     private let pushUpTextField = PSSPTextField()
-    private let sevenDaysAvgLabel = PSSPLabel()
     
-    private let sevenDaysAvgCountLabel = PSSPLabel()
     
-    private let thirtyDaysAvgLabel = PSSPLabel()
-    private let thirtyDaysAvgCountLabel = PSSPLabel()
+    private let avgContainerView = SevenAndThirtyDaysContainer()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,10 +33,9 @@ final class PushUpViewController: UIViewController {
         completedLabelConfiguration()
 
         pushUpTextFieldConfiguration()
-        sevenDaysAvgLabelConfiguration()
-        sevenDaysAvgCountLabelConfiguration()
-        thirtyDaysAvgLabelConfiguration()
-        thirtyDaysAvgCountLabelConfiguration()
+        
+        
+        avgDaysContainerViewConfiguration()
 
     }
    
@@ -89,59 +85,18 @@ final class PushUpViewController: UIViewController {
         ])
     }
     
-    // Seven Days Average Label Configuration
-    func sevenDaysAvgLabelConfiguration() {
-        sevenDaysAvgLabel.translatesAutoresizingMaskIntoConstraints = false
-        sevenDaysAvgLabel.text = "Seven Days Average"
-                
-        view.addSubview(sevenDaysAvgLabel)
-        
-        NSLayoutConstraint.activate([
-            sevenDaysAvgLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 0),
-            sevenDaysAvgLabel.topAnchor.constraint(equalTo: pushUpTextField.bottomAnchor, constant: 50),
-            sevenDaysAvgLabel.heightAnchor.constraint(equalToConstant: 25)
-        ])
-    }
     
-    // Seven Days Average Count Label Configuration
-    func sevenDaysAvgCountLabelConfiguration() {
-        sevenDaysAvgCountLabel.translatesAutoresizingMaskIntoConstraints = false
-        sevenDaysAvgCountLabel.text = "\(sevenDaysAverage.userDefault.object(forKey: "todayPushes")) Place Holder"
+    // Average Days ContainerView Configuration
+    func avgDaysContainerViewConfiguration() {
+        avgContainerView.translatesAutoresizingMaskIntoConstraints = false
         
-        view.addSubview(sevenDaysAvgCountLabel)
-        
-        NSLayoutConstraint.activate([
-            sevenDaysAvgCountLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 0),
-            sevenDaysAvgCountLabel.topAnchor.constraint(equalTo: sevenDaysAvgLabel.bottomAnchor, constant: 15),
-            sevenDaysAvgCountLabel.heightAnchor.constraint(equalToConstant: 25)
-        ])
-    }
-    
-    // Thirty Days Average Label Configuration
-    func thirtyDaysAvgLabelConfiguration() {
-        thirtyDaysAvgLabel.translatesAutoresizingMaskIntoConstraints = false
-        thirtyDaysAvgLabel.text = "Thirty Days"
-        
-        view.addSubview(thirtyDaysAvgLabel)
+        view.addSubview(avgContainerView)
         
         NSLayoutConstraint.activate([
-            thirtyDaysAvgLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 0),
-            thirtyDaysAvgLabel.topAnchor.constraint(equalTo: sevenDaysAvgCountLabel.bottomAnchor, constant: 25),
-            thirtyDaysAvgLabel.heightAnchor.constraint(equalToConstant: 25)
-        ])
-    }
-    
-    // Thirty Days Average Count Label Configuration
-    func thirtyDaysAvgCountLabelConfiguration() {
-        thirtyDaysAvgCountLabel.translatesAutoresizingMaskIntoConstraints = false
-        thirtyDaysAvgCountLabel.text = "\(sevenDaysAverage.userDefault.object(forKey: "todayPushes")) Place Holder"
-        
-        view.addSubview(thirtyDaysAvgCountLabel)
-        
-        NSLayoutConstraint.activate([
-            thirtyDaysAvgCountLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 0),
-            thirtyDaysAvgCountLabel.topAnchor.constraint(equalTo: thirtyDaysAvgLabel.bottomAnchor, constant: 15),
-            thirtyDaysAvgCountLabel.heightAnchor.constraint(equalToConstant: 25)
+            avgContainerView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
+            avgContainerView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
+            avgContainerView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -15),
+            avgContainerView.topAnchor.constraint(equalTo: pushUpTextField.bottomAnchor, constant: 10)
         ])
     }
     
