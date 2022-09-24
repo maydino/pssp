@@ -20,7 +20,7 @@ final class PushUpViewController: UIViewController {
     
     private let enterCompletedLabel = PSSPLabel()
     private let pushUpTextField = PSSPTextField()
-    
+    private let completedButton = PSSPButton()
     
     private let avgContainerView = SevenAndThirtyDaysContainer()
 
@@ -33,7 +33,7 @@ final class PushUpViewController: UIViewController {
         completedLabelConfiguration()
 
         pushUpTextFieldConfiguration()
-        
+        completedButtonConfiguration()        
         
         avgDaysContainerViewConfiguration()
 
@@ -49,7 +49,7 @@ final class PushUpViewController: UIViewController {
         
         NSLayoutConstraint.activate([
             pushUpImage.widthAnchor.constraint(equalToConstant: view.bounds.width*0.6),
-            pushUpImage.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
+            pushUpImage.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
             pushUpImage.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 0),
             pushUpImage.heightAnchor.constraint(equalToConstant: view.bounds.width*0.6)
         ])
@@ -66,10 +66,11 @@ final class PushUpViewController: UIViewController {
         NSLayoutConstraint.activate([
             enterCompletedLabel.widthAnchor.constraint(equalToConstant: view.bounds.width*0.8),
             enterCompletedLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 0),
-            enterCompletedLabel.topAnchor.constraint(equalTo: pushUpImage.bottomAnchor, constant: 25),
+            enterCompletedLabel.topAnchor.constraint(equalTo: pushUpImage.bottomAnchor, constant: 20),
             enterCompletedLabel.heightAnchor.constraint(equalToConstant: 25)
         ])
     }
+        
     
     // Push Up Text Field Configuration
     func pushUpTextFieldConfiguration() {
@@ -85,6 +86,25 @@ final class PushUpViewController: UIViewController {
         ])
     }
     
+    // Enter Completed Push Ups Label Configuration
+    func completedButtonConfiguration() {
+        completedButton.translatesAutoresizingMaskIntoConstraints = false
+        completedButton.setTitle("Save", for: .normal)
+        completedButton.backgroundColor = .clear
+        completedButton.setTitleColor(.systemBlue, for: .normal)
+        completedButton.setTitleColor(.systemGray, for: .highlighted)
+        completedButton.titleLabel?.font = UIFont.preferredFont(forTextStyle: .title3)
+        completedButton.dropShadow(color: .clear, offSet: .zero)
+                        
+        view.addSubview(completedButton)
+        
+        NSLayoutConstraint.activate([
+            completedButton.widthAnchor.constraint(equalToConstant: 50),
+            completedButton.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 0),
+            completedButton.topAnchor.constraint(equalTo: pushUpTextField.bottomAnchor, constant: 15),
+            completedButton.heightAnchor.constraint(equalToConstant: 25)
+        ])
+    }
     
     // Average Days ContainerView Configuration
     func avgDaysContainerViewConfiguration() {
@@ -96,10 +116,8 @@ final class PushUpViewController: UIViewController {
             avgContainerView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
             avgContainerView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
             avgContainerView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -15),
-            avgContainerView.topAnchor.constraint(equalTo: pushUpTextField.bottomAnchor, constant: 10)
+            avgContainerView.topAnchor.constraint(equalTo: completedButton.bottomAnchor, constant: 10)
         ])
     }
-    
-    
 
 }

@@ -35,10 +35,26 @@ class PSSPTextField: UITextField {
         
         backgroundColor = .psspCollectionCellColor
         autocorrectionType = .no
+        setDoneOnKeyboard()
         
         placeholder = "0"
         
         
     }
+    
+    func setDoneOnKeyboard() {
+        let keyboardToolbar = UIToolbar()
+        keyboardToolbar.sizeToFit()
+        let flexBarButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let doneBarButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(self.dismissKeyboard))
+        keyboardToolbar.items = [flexBarButton, doneBarButton]
+        inputAccessoryView = keyboardToolbar
+    }
+
+    @objc func dismissKeyboard() {
+        self.endEditing(true)
+    }
+ 
+    
     
 }

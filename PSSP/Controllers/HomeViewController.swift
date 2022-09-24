@@ -67,9 +67,8 @@ final class HomeViewController: UIViewController, UICollectionViewDelegate, UICo
         print(selection)
         let pushUpViewController = collectionViewCellPressedAction(item: indexPath.item)
         pushUpViewController.title = selectedNavigationControllerTitle
-        pushUpViewController.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(dismissSelf))
+        pushUpViewController.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "x.circle"), style: .done, target: self, action: #selector(dismissSelf))
 
-        
         let navigationController = UINavigationController(rootViewController: pushUpViewController)
         navigationController.modalPresentationStyle = .overFullScreen
 
